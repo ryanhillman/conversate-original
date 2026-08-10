@@ -1,4 +1,4 @@
-\# Conversate - 2020
+# Conversate - 2020
 
 
 
@@ -16,7 +16,7 @@ Conversate is a full-stack web application for learning basic Italian.
 
 
 
-\[Visit modernized version of Conversate here.](https://github.com/ryanhillman/conversate)
+[Visit modernized version of Conversate here.](https://github.com/ryanhillman/conversate)
 
 
 
@@ -28,27 +28,24 @@ Thank you to everyone involved.
 
 
 
-\---
+---
 
 
 
-\## Tech Stack
+## Tech Stack
 
-\- \*\*Backend:\*\* Python 3.7, Flask, SQLAlchemy, PostgreSQL, Alembic, Gunicorn
+- **Backend:** Python 3.7, Flask, SQLAlchemy, PostgreSQL, Alembic, Gunicorn
 
-\- \*\*Frontend:\*\* Vue 2, Vue Router, Axios, Sass
+- **Frontend:** Vue 2, Vue Router, Axios, Sass
 
-\- \*\*Authentication:\*\* Auth0
-
-
-
-\---
+- **Authentication:** Auth0
 
 
 
-\## Screenshot
-
-!\[App Screenshot](./docs/screenshot.png)
+---
 
 
 
+## Screenshot
+
+![App Screenshot](./docs/screenshot.png)
