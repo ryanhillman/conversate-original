@@ -1,6 +1,7 @@
 # Conversate - 2020
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Security-Auth0-EB5424" />
   <img src="https://img.shields.io/badge/Backend-Flask-000000?logo=flask&logoColor=white" />
   <img src="https://img.shields.io/badge/Frontend-Vue.js-42B883?logo=vue.js&logoColor=white" />
 </p>
