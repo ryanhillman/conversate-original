@@ -16,6 +16,12 @@ Thank you to everyone involved.
 
 ---
 
+## Screenshot
+
+![App Screenshot](./docs/screenshot.png)
+
+---
+
 ## Tech Stack
 
 **Backend**
@@ -65,6 +71,7 @@ DATABASE_URL=postgresql://conversate:conversate@127.0.0.1:5432/conversate
 DEBUG=True
 ```
 
+With that file in place, run:
 ```bash
 python manage.py db upgrade
 python run.py
@@ -80,9 +87,3 @@ docker run -it --rm -p 3000:3000 -v "${PWD}:/app" -w /app node:10-alpine sh -c "
 ### Auth0
 
 Set `domain`/`clientId` in `front-end/auth_config.json` for your own Auth0 Single Page Application, with `http://localhost:3000` added to its Allowed Callback URLs, Logout URLs, and Web Origins.
-
----
-
-## Screenshot
-
-![App Screenshot](./docs/screenshot.png)
