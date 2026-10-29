@@ -1,9 +1,7 @@
 # Conversate - 2020
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Security-Auth0-EB5424" />
-  <img src="https://img.shields.io/badge/Backend-Flask-000000?logo=flask&logoColor=white" />
-  <img src="https://img.shields.io/badge/Frontend-Vue.js-42B883?logo=vue.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Status-Incomplete-red" />
 </p>
 
 Conversate is a full-stack web application for learning basic Italian. 
@@ -11,8 +9,6 @@ Conversate is a full-stack web application for learning basic Italian.
 [Visit modernized version of Conversate here.](https://github.com/ryanhillman/conversate-modernization)
 
 It was originally designed as a capstone group project and is incomplete.
-
-Thank you to everyone involved.
 
 ---
 
@@ -45,14 +41,14 @@ Thank you to everyone involved.
 
 ## How to Run
 
-Requires Python 3.7, Node 10, PostgreSQL, and Docker.
+Requires Python 3.7, PostgreSQL, and Docker (used to run Node 10).
 
 ### PostgreSQL
 
 ```bash
 psql -U postgres -c "CREATE DATABASE conversate;"
 psql -U postgres -c "CREATE ROLE conversate LOGIN PASSWORD 'conversate';"
-psql -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE conversate TO conversate;"
+psql -U postgres -c "ALTER DATABASE conversate OWNER TO conversate;"
 ```
 
 ### Backend
@@ -65,13 +61,13 @@ pip install -r requirements.txt
 pip install "Werkzeug==0.16.1" "MarkupSafe==1.1.1" "click==7.1.2" "itsdangerous==1.1.0"
 ```
 
-Create a `.env` file in `backend/` with:
+Create `backend/.env`:
 ```
 DATABASE_URL=postgresql://conversate:conversate@127.0.0.1:5432/conversate
 DEBUG=True
 ```
 
-With that file in place, run:
+Then:
 ```bash
 python manage.py db upgrade
 python run.py
@@ -79,11 +75,22 @@ python run.py
 
 ### Frontend
 
+Create `front-end/auth_config.json` (copy `auth_config.json.example`). Placeholder values compile, but logging in requires an Auth0 Single Page Application with `http://localhost:3000` in its Allowed Callback URLs, Logout URLs, and Web Origins.
+```json
+{
+  "domain": "YOUR_AUTH0_DOMAIN",
+  "clientId": "YOUR_AUTH0_CLIENT_ID"
+}
+```
+
+Then:
 ```bash
 cd front-end
 docker run -it --rm -p 3000:3000 -v "${PWD}:/app" -w /app node:10-alpine sh -c "npm install regenerator-runtime && npm install && npx vue-cli-service serve --host 0.0.0.0 --port 3000"
 ```
 
-### Auth0
+---
 
-Set `domain`/`clientId` in `front-end/auth_config.json` for your own Auth0 Single Page Application, with `http://localhost:3000` added to its Allowed Callback URLs, Logout URLs, and Web Origins.
+## Credits
+
+Thank you to everyone involved.
