@@ -10,13 +10,9 @@ Conversate is a full-stack web application for learning basic Italian.
 
 It was originally designed as a capstone group project and is incomplete.
 
----
-
 ## Screenshot
 
 ![App Screenshot](./docs/screenshot.png)
-
----
 
 ## Tech Stack
 
@@ -36,8 +32,6 @@ It was originally designed as a capstone group project and is incomplete.
 
 **Authentication**
 - Auth0
-
----
 
 ## How to Run
 
@@ -88,8 +82,6 @@ Then:
 cd front-end
 docker run -it --rm -p 3000:3000 -v "${PWD}:/app" -w /app node:10-alpine sh -c "npm install regenerator-runtime && npm install && npx vue-cli-service serve --host 0.0.0.0 --port 3000"
 ```
-
----
 
 ## Credits
 
